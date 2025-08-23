@@ -7,7 +7,6 @@ class Assignment1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        // พื้นหลัง gradient
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
@@ -21,7 +20,6 @@ class Assignment1 extends StatelessWidget {
         child: Center(
           child: Stack(
             children: [
-              // กรอบการ์ด
               Container(
                 width: 350,
                 height: 500,
@@ -38,14 +36,12 @@ class Assignment1 extends StatelessWidget {
                 ),
               ),
 
-              // เนื้อหาการ์ด
               Positioned(
                 top: 20,
                 left: 0,
                 right: 0,
                 child: Column(
                   children: [
-                    // รูปโปรไฟล์
                     ClipOval(
                       child: Image.network(
                         'https://scontent.fbkk29-7.fna.fbcdn.net/v/t39.30808-6/471721881_3476098476018282_6687528858918824299_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEMEfSF7xHk71-H1ZEAhbr-XgAXTI4BRFZeABdMjgFEVjinE-dH_aGxhGg93SZYXRs_dfv6qUvqRoFPOeM6XOMq&_nc_ohc=7jltfuU0POkQ7kNvwGWFli3&_nc_oc=AdmH4tSaRQOZlTm7wbpi_EOPXmp_UetViOgp6TawyEibhpGEmiAUYrPAQ9K3NUwl-6Q&_nc_zt=23&_nc_ht=scontent.fbkk29-7.fna&_nc_gid=fa2A_ATpzF2eCb-CcHFwAw&oh=00_AfWTJHzSiZ3rcop7nmvFiRQ9E2laL7iZLj9_8ZZecrN1OA&oe=68AEF93C',
@@ -56,7 +52,6 @@ class Assignment1 extends StatelessWidget {
                     ),
                     const SizedBox(height: 15),
 
-                    // ชื่อ
                     const Text(
                       '660710248 Paramet Sittiracha',
                       style: TextStyle(
@@ -77,7 +72,6 @@ class Assignment1 extends StatelessWidget {
 
                     const SizedBox(height: 10),
 
-                    // เส้น Divider
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 40),
                       height: 2,
@@ -85,8 +79,6 @@ class Assignment1 extends StatelessWidget {
                     ),
 
                     const SizedBox(height: 10),
-
-                    // ข้อความอธิบาย
                     const Text(
                       'ผมชอบกินโกโก้ครับ',
                       style: TextStyle(
