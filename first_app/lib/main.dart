@@ -1,50 +1,25 @@
+import 'package:first_app/week3.dart';
 import 'package:flutter/material.dart';
+import 'package:first_app/assignment1.dart';
 
 void main() {
-  runApp(
-    const MaterialApp(home: TrafficLight(), debugShowCheckedModeBanner: false),
-  );
+  runApp(const MyApp());
 }
 
-class TrafficLight extends StatelessWidget {
-  const TrafficLight({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey[300],
-      body: Center(
-        child: Stack(
-          children: [
-            // กรอบไฟจราจร
-            Container(
-              width: 120,
-              height: 300,
-              decoration: BoxDecoration(
-                color: Colors.black,
-                borderRadius: BorderRadius.circular(10),
-              ),
-            ),
-
-            // ไฟแดง
-            const Positioned(
-              top: 20,
-              left: 20,
-              child: CircleAvatar(radius: 40, backgroundColor: Colors.red),
-            ),
-            const Positioned(
-              top: 110,
-              left: 20,
-              child: CircleAvatar(radius: 40, backgroundColor: Colors.yellow),
-            ),
-            const Positioned(
-              top: 200,
-              left: 20,
-              child: CircleAvatar(radius: 40, backgroundColor: Colors.green),
-            ),
-          ],
-        ),
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        useMaterial3: true,
       ),
+      debugShowCheckedModeBanner: false,
+      home: Assignment1(),
     );
   }
 }
