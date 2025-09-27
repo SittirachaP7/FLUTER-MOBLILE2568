@@ -1,6 +1,6 @@
-import 'package:first_app/week3.dart';
 import 'package:flutter/material.dart';
-import 'package:first_app/assignment1.dart';
+import 'assignment2.dart';
+import 'dart:convert';
 
 void main() {
   runApp(const MyApp());
@@ -9,17 +9,16 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Air Quality App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      debugShowCheckedModeBanner: false,
-      home: Assignment1(),
+      home: const AirQualityPage(),
     );
   }
 }
